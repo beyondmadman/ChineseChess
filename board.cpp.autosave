@@ -1,0 +1,53 @@
+#include "board.h"
+
+#include <QPainter>
+
+Board::Board(QWidget *parent) : QWidget(parent)
+{
+
+}
+
+void Board::paintEvent(QPaintEvent *)
+{
+    QPainter p(this);
+    p.setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing);
+
+    drawPlate(p);
+}
+
+void Board::drawPlate(QPainter &p)
+{
+    for(int i=0; i<10; ++i)
+    {
+        if(i==0 || i==9)
+        {
+            p.setPen(QPen(Qt::black, 3, Qt::SolidLine));
+        }
+        else
+        {
+            p.setPen(QPen(Qt::black, 1, Qt::SolidLine));
+        }
+        p.drawLine(center(i, 0), center(i, 8));
+    }
+
+    for(int i=0; i<9; ++i)
+    {
+        if(i==0 || i==8)
+        {
+            p.setPen(QPen(Qt::black, 3, Qt::SolidLine));
+            p.drawLine(center(0, i), center(9, i));
+        }
+        else
+        {
+            p.setPen(QPen(Qt::black, 1, Qt::SolidLine));
+            p.drawLine(center(0, i), center(4, i));
+            p.drawLine(center(5, i), center(9, i));
+        }
+    }
+}
+
+QPoint Board::SwitchPos(int row, int col)
+{
+    QPoint pt(_r*col*2, _r*row*2);
+    return pt + _off;
+}

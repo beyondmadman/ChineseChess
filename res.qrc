@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/CHESS_ITEM.png</file>
+        <file>res/ctrlpanel.png</file>
+        <file>res/mainback.png</file>
+        <file>res/selected1.png</file>
+        <file>res/selected2.png</file>
+        <file>res/singleplayer.png</file>
+        <file>res/regret.jpg</file>
+        <file>res/start.jpg</file>
+        <file>res/blackchess.png</file>
+        <file>res/redchess.png</file>
+        <file>res/new.jpg</file>
+        <file>res/chessborad.png</file>
+        <file>res/win.png</file>
+        <file>res/difficulty.jpg</file>
+        <file>res/logo.png</file>
+        <file>res/closesound.png</file>
+        <file>res/opensound.png</file>
+        <file>res/bgmusic.wav</file>
+        <file>res/start.wav</file>
+        <file>res/new.wav</file>
+        <file>res/regret.wav</file>
+        <file>res/lost.wav</file>
+        <file>res/win.wav</file>
+        <file>res/check.wav</file>
+        <file>res/down.wav</file>
+    </qresource>
+</RCC>
